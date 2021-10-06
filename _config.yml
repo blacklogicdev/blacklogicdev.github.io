@@ -23,7 +23,7 @@ title                  : "Black Logic"
 email                  : "blacklogic.dev@gmail.com"
 description            : >- # this means to ignore newlines until "baseurl:"
 baseurl                : "" # the subpath of your site, e.g. /blog
-url                    : "http://blacklogic.github.io"
+url                    : "http://blacklogicdev.github.io"
 github_username        : "Black Logic"
 highlighter            : rouge
 svg                    :

@@ -4,34 +4,33 @@ title:  "[논문리뷰] BART: Denoising Sequence-to-Sequence Pre-training for Na
 date:   2021-10-06
 ---
 
-
 # [논문리뷰]
-
-## **BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension**
-
+**BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension**
 ([논문보기](https://arxiv.org/abs/1910.13461))
 
-### 1. **Introduction**
+<br>
 
----
+## 1. Introduction
 
-Self-supervised 방식은 광범위한 NLP 과제에서 주목할 만한 성공을 거두었다. 
+Self-supervised 방식은 광범위한 NLP 과제에서 주목할 만한 성공을 거두었다.
 
 그 중 가장 성공적인 접근은 Denoising Autoencoder.
 
 이는 임의로 마스킹된 텍스트를 재구성하도록 사전학습된 마스킹 언어 모델의 변형이다.
 
-**그러나 기존의 마스킹 사전훈련 모델은** 특정 타입의 과제 (예: span prediction, generation, etc.)에 초점을 두어 적용성이 제한된다. 
+**그러나 기존의 마스킹 사전훈련 모델은** 특정 타입의 과제 (예: span prediction, generation, etc.)에 초점을 두어 적용성이 제한된다.
 
-**반면 BART는** NLG & NLU tasks에 모두 적용 가능하다.
+**반면 BART는** NLG & NLU tasks에 모두 적용 가능하다. 
 
 **BART는** Bidirectional과 Auto-Regressive Transformers를 결합한 사전학습을 위한 모델이다.
 
+<br>
+
 **BART의 사전 학습 단계**는 다음과 같다.
-
   1) 임의의 Noise Function으로 텍스트를 손상시킨 후 
-
   2) Sequence-to-Sequence 모델이 학습하여 원본 텍스트를 재구성한다.
+
+<br>
 
 **BERT / GPT / BART는 어떻게 다를까?**
 
@@ -60,9 +59,7 @@ Self-supervised 방식은 광범위한 NLP 과제에서 주목할 만한 성공�
 
 ![Untitled](/public/img/bart3.png)
 
-### 2. Model
-
----
+## 2. Model
 
 BART는 (Vaswani et al., 2017)의 Sequence-to-Sequence Transformer 구조를 사용하지만, 
 
@@ -73,9 +70,7 @@ Base model에는 6개의 레이어를,
 
 Large Model에는 12개의 레이어를 각각 encoder와 decoder에 사용했다.
 
-### 3. Fine-tuning BART
-
----
+## 3. Fine-tuning BART
 
 BART로 생성된 representations은 다음과 같은 tasks에 적용(Fine-tuning)될 수 있다.
 
@@ -84,9 +79,7 @@ BART로 생성된 representations은 다음과 같은 tasks에 적용(Fine-tunin
 - Sequence Generation
 - Machine Translation
 
-### 4. Comparing Pre-training Objectives
-
----
+## 4. Comparing Pre-training Objectives
 
 Base model를 사용해 다양한 옵션을 비교해본 결과:
 
@@ -97,9 +90,7 @@ Base model를 사용해 다양한 옵션을 비교해본 결과:
 
 ![Untitled](/public/img/bart4.png)
 
-### 5. Large-scale Pre-traning Experiments
-
----
+## 5. Large-scale Pre-traning Experiments
 
 RoBERTa 모델과 동일한 스케일 (8000 batch size & 500000 steps)로 
 
@@ -147,7 +138,7 @@ BART(w/ Text Infilling + Sentence Shuffling) 모델을 훈련시켜 본 결과�
 
 ![Untitled](/public/img/bart10.png)
 
-### 8. Conclusion
+## 8. Conclusion
 
 - BART는 Discriminative 과제에서 RoBERTa와 유사한 성능을 보이는 동시에
 - 다양한 Generation 과제에서 SOTA를 달성

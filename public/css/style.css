@@ -96,7 +96,7 @@ code {
 	display: flex;
 	flex-flow: column nowrap;
 	flex: 0 0 300px;
-	padding: 15px;
+	padding: 30px;
 	z-index: 1;
 	background-color: #222;
 	color: #fff;

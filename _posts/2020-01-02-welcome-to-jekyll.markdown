@@ -4,30 +4,29 @@ title:  "[논문리뷰] BART: Denoising Sequence-to-Sequence Pre-training for Na
 date:   2021-10-06
 ---
 
-# [논문리뷰]
-**BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension**
 ([논문보기](https://arxiv.org/abs/1910.13461))
 
-<br>
 
-## 1. Introduction
+## 1. **Introduction**
 
-Self-supervised 방식은 광범위한 NLP 과제에서 주목할 만한 성공을 거두었다.
+Self-supervised 방식은 광범위한 NLP 과제에서 주목할 만한 성공을 거두었다. 
 
 그 중 가장 성공적인 접근은 Denoising Autoencoder.
 
 이는 임의로 마스킹된 텍스트를 재구성하도록 사전학습된 마스킹 언어 모델의 변형이다.
 
-**그러나 기존의 마스킹 사전훈련 모델은** 특정 타입의 과제 (예: span prediction, generation, etc.)에 초점을 두어 적용성이 제한된다.
-
-**반면 BART는** NLG & NLU tasks에 모두 적용 가능하다. 
-
-**BART는** Bidirectional과 Auto-Regressive Transformers를 결합한 사전학습을 위한 모델이다.
+**그러나 기존의 마스킹 사전훈련 모델은** 특정 타입의 과제 (예: span prediction, generation, etc.)에 초점을 두어 적용성이 제한된다. 
 
 <br>
 
+**반면 BART는** NLG & NLU tasks에 모두 적용 가능하다.
+
+**BART는** Bidirectional과 Auto-Regressive Transformers를 결합한 사전학습을 위한 모델이다.
+
 **BART의 사전 학습 단계**는 다음과 같다.
+
   1) 임의의 Noise Function으로 텍스트를 손상시킨 후 
+
   2) Sequence-to-Sequence 모델이 학습하여 원본 텍스트를 재구성한다.
 
 <br>

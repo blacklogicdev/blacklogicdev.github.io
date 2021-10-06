@@ -41,7 +41,7 @@ Self-supervised 방식은 광범위한 NLP 과제에서 주목할 만한 성공�
 - 양방향으로 인코딩되어 마스킹된 토큰이 독립적으로 예측된다.
 - Text Understanding에 사용될 수 있다. Text Generation에는 사용되기 어렵다.
 
-![Untitled](bart1.png)
+![Untitled](/public/img/bart1.png)
 
 (b) **GPT:** Generative Pre-trained Transformer (생성적 사전훈련 트랜스포머) 
 
@@ -49,7 +49,7 @@ Self-supervised 방식은 광범위한 NLP 과제에서 주목할 만한 성공�
 - 왼쪽의 컨텍스트 조건만 사용하기 때문에 양방향 상호 작용은 어렵다.
 - Text Generation에 사용될 수 있다. Text Understanding은 어렵다.
 
-![Untitled](bart2.png)
+![Untitled](/public/img/bart2.png)
 
 (c) **BART:** Bidirectional and Auto-Regressive Transformer (양방향 자동회귀 트랜스포머)
 
@@ -58,7 +58,7 @@ Self-supervised 방식은 광범위한 NLP 과제에서 주목할 만한 성공�
 - 미세 조정을 위해 손상되지 않은 문서가 encoder/decoder에 모두 입력되며 decoder의 최종 hidden state를 사용한다.
 - Text Generation에 특히 효과적이지만 Text Understanding에도 적용이 가능하다.
 
-![Untitled](bart3.png)
+![Untitled](/public/img/bart3.png)
 
 ### 2. Model
 
@@ -95,7 +95,7 @@ Base model를 사용해 다양한 옵션을 비교해본 결과:
 - 과제에 따라 성능이 좋은 모델이 달랐지만,
 - Text Infilling이 포함된 BART 모델이 여러 과제에서 일관되게 좋은 성능을 보였다.
 
-![Untitled](bart4.png)
+![Untitled](/public/img/bart4.png)
 
 ### 5. Large-scale Pre-traning Experiments
 
@@ -110,7 +110,7 @@ BART(w/ Text Infilling + Sentence Shuffling) 모델을 훈련시켜 본 결과�
 - SQuAD와 GLUE에서 RoBERTa 및 XLNet과 유사한 성능
 - 즉, 단방향 decoder 계층이 분류 과제의 성능을 저하시키지 않음을 시사
     
-    ![Untitled](bart5.png)
+    ![Untitled](/public/img/bart5.png)
     
 
 2) **Generation Tasks**
@@ -119,16 +119,16 @@ BART(w/ Text Infilling + Sentence Shuffling) 모델을 훈련시켜 본 결과�
 - BART가 두 개의 과제 및 모든 메트릭에서 모두 기존 모델들보다 좋은 성능을 보임
 - 특히 XSum(매우 추상적인 뉴스 요약 데이터 세트)에서 더 좋은 성능을 나타냄
 
-![Untitled](bart6.png)
+![Untitled](/public/img/bart6.png)
 
 - BART는 대화 응답 생성 과제에서도 기존 연구보다 성능이 우수
 
-![Untitled](bart7.png)
+![Untitled](/public/img/bart7.png)
 
 - 까다로운 ELI5 추상적 질문 응답 데이터 세트에서는 SOTA를 달성
 - 그러나 응답이 질문에 의해 weakly specified되기 때문에 여전히 challenging한 과제
 
-![Untitled](bart8.png)
+![Untitled](/public/img/bart8.png)
 
 3) **Translation**
 
@@ -136,7 +136,7 @@ BART(w/ Text Infilling + Sentence Shuffling) 모델을 훈련시켜 본 결과�
 - 그러나 역번역 데이터가 없으면 과적합(Overfitting)되기 쉬움
 - 따라서 정규화 기법에 대한 추가적인 연구가 필요
 
-![Untitled](bart9.png)
+![Untitled](/public/img/bart9.png)
 
 ### 6**. Qualitative Analysis**
 
@@ -145,7 +145,7 @@ BART(w/ Text Infilling + Sentence Shuffling) 모델을 훈련시켜 본 결과�
 - BART는 특히 텍스트 요약에서 강력한 성능을 보임
 - 아래 샘플 요약 텍스트는 BART가 자연어의 이해와 생성의 강력한 조합으로 학습되었음을 보여줌
 
-![Untitled](bart10.png)
+![Untitled](/public/img/bart10.png)
 
 ### 8. Conclusion
 
